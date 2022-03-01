@@ -18,7 +18,7 @@ button {
 }
 
 .app {
-  width: 400px;
+  width: 80%;
   margin: 0 auto;
   height: 100vh;
 }
@@ -29,6 +29,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .form > h1 {
@@ -67,7 +68,7 @@ textarea:focus {
 }
 
 .form > button {
-  padding: 20px;
+  padding: 0.5em 1.5em;
   border: none;
   background-color: rgb(2, 2, 110);
   font-weight: 500;
@@ -76,9 +77,24 @@ textarea:focus {
   color: #fff;
   cursor: pointer;
   transition: 0.2s ease-in-out;
-  margin-top: 10px;
+  margin-top: 1em;
 }
 
 .form > button:hover {
   background-color: rgb(0, 0, 196);
+}
+.inputu{
+  padding:0.5em 0.5em;
+  width: 16em;
+}
+.inputu.one{
+  margin-right: 2em;
+}
+.linuuu{
+  display: flex;
+  margin-top: 1em;
+}
+.ps-details{
+  text-align: center;
+  margin-top: 1em;
 }

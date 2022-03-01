@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../app.css";
-import { db } from "../firebase";
+// import { db } from "../firebase";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -9,54 +9,93 @@ const Contact = () => {
 
   const [loader, setLoader] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoader(true);
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   setLoader(true);
 
-    db.collection("contacts")
-      .add({
-        name: name,
-        email: email,
-        message: message,
-      })
-      .then(() => {
-        setLoader(false);
-        alert("Your message has been submitted👍");
-      })
-      .catch((error) => {
-        alert(error.message);
-        setLoader(false);
-      });
+  //   db.collection("contacts")
+  //     .add({
+  //       name: name,
+  //       email: email,
+  //       message: message,
+  //     })
+  //     .then(() => {
+  //       setLoader(false);
+  //       alert("Your message has been submitted👍");
+  //     })
+  //     .catch((error) => {
+  //       alert(error.message);
+  //       setLoader(false);
+  //     });
 
-    setName("");
-    setEmail("");
-    setMessage("");
-  };
+  //   setName("");
+  //   setEmail("");
+  //   setMessage("");
+  // };
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
-      <h1>Contact Us 🤳</h1>
-
-      <label>Name</label>
+    <form className="form">
+      
+    <div className="maindiv">
+    <h1 className="ps-details">Personal Details</h1>
+    <div className="linuuu">
       <input
+      className="inputu one"
         placeholder="Name"
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
-
-      <label>Email</label>
       <input
+      className="inputu"
         placeholder="Email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
-
-      <label>Message</label>
-      <textarea
-        placeholder="Message"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-      ></textarea>
+      </div>
+</div>
+<div className="maindiv">
+    <div className="linuuu">
+      <input
+      className="inputu one"
+        placeholder="Name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <input
+      className="inputu"
+        placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      </div>
+</div>
+<div className="maindiv">
+<h1 className="ps-details">Account Details</h1>
+    <div className="linuuu">
+      <input
+      className="inputu one"
+        placeholder="Name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <input
+      className="inputu"
+        placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      </div>
+</div>
+<div className="maindiv">
+    <div className="linuuu">
+      <select className="inputu">
+      <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+      </select>
+      </div>
+</div>
 
       <button
         type="submit"
