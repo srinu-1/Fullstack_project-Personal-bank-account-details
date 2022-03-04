@@ -4,8 +4,11 @@ import "../app.css";
 
 const Contact = () => {
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [lastname, set2Name] = useState("");
+  const [f1, setF1] = useState("");
+  const [f2, setF2] = useState("");
+  const [f3, setF3] = useState("");
+  const [f4, setF4] = useState("");
 
   const [loader, setLoader] = useState(false);
 
@@ -41,15 +44,15 @@ const Contact = () => {
     <div className="linuuu">
       <input
       className="inputu one"
-        placeholder="Name"
+        placeholder="First Name"
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
       <input
       className="inputu"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        placeholder="Last Name"
+        value={lastname}
+        onChange={(e) => set2Name(e.target.value)}
       />
       </div>
 </div>
@@ -57,15 +60,15 @@ const Contact = () => {
     <div className="linuuu">
       <input
       className="inputu one"
-        placeholder="Name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
+        placeholder="Field1"
+        value={f1}
+        onChange={(e) => setF1(e.target.value)}
       />
       <input
       className="inputu"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        placeholder="Field2"
+        value={f2}
+        onChange={(e) => setF2(e.target.value)}
       />
       </div>
 </div>
@@ -74,15 +77,15 @@ const Contact = () => {
     <div className="linuuu">
       <input
       className="inputu one"
-        placeholder="Name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
+        placeholder="Field-3"
+        value={f3}
+        onChange={(e) => setF3(e.target.value)}
       />
       <input
       className="inputu"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        placeholder="Field-4"
+        value={f4}
+        onChange={(e) => setF4(e.target.value)}
       />
       </div>
 </div>
