@@ -13,36 +13,26 @@ const Contact = () => {
   const [loader, setLoader] = useState(false);
 
   // const handleSubmit = (e) => {
+  //       e.preventDefault();
+  //   setLoader(true);
+  //   alert("Your message has been submitted👍");
+  // }
+
+  // const handleSubmit = (e) => {
   //   e.preventDefault();
   //   setLoader(true);
-
-  //   db.collection("contacts")
-  //     .add({
-  //       name: name,
-  //       email: email,
-  //       message: message,
-  //     })
-  //     .then(() => {
-  //       setLoader(false);
-  //       alert("Your message has been submitted👍");
-  //     })
-  //     .catch((error) => {
-  //       alert(error.message);
-  //       setLoader(false);
-  //     });
-
-  //   setName("");
-  //   setEmail("");
-  //   setMessage("");
+  //   setLoader(false);
+  //   alert("Your message has been submitted👍");
   // };
 
   return (
-    <form className="form">
+    <form className="form" action="http://127.0.0.1:5000/insert" method="post">
       
     <div className="maindiv">
     <h1 className="ps-details">Personal Details</h1>
     <div className="linuuu">
       <input
+      name="firstName"
       className="inputu one"
         placeholder="First Name"
         value={name}
